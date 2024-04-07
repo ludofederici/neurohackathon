@@ -31,8 +31,11 @@ export function Focus() {
       const newFocusScores = [...prevScores, focusScore];
 
       // Calculate the average using the new array
-      const averageFocusScore = Math.round(newFocusScores.slice(-20).reduce((acc, score) => acc + score, 0) / Math.min(newFocusScores.length, 20));
+      const averageFocusScore = Math.round(newFocusScores.slice(-25).reduce((acc, score) => acc + score, 0) / Math.min(newFocusScores.length, 20));
       setAverageFocusScore(averageFocusScore);
+      if (averageFocusScore < 23) {
+        alert('Your average focus score over the last 25 entries is below 23%. Consider taking a break or changing tasks.');
+      }
 
       return newFocusScores;
     });
@@ -55,7 +58,7 @@ export function Focus() {
       <div className="metric-score" style={{ borderColor: color }}>
         &nbsp;{focus}% <div className="metric-word">Focus</div>
       </div>
-      <div>Average of last 20 scores: {averageFocusScore}%</div>
+      <div>Average of last 25 scores: {averageFocusScore}%</div>
     </main>
   );
 }
