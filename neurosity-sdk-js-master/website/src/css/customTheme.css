@@ -1,0 +1,77 @@
+/* your custom css */
+@font-face {
+  font-family: "Eina02-Regular";
+  src: url("/static/fonts/Eina02-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Eina02-SemiBold";
+  src: url("/static/fonts/Eina02-SemiBold.ttf");
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
+
+:root {
+  --ifm-font-family-base: "Eina02-Regular", Helvetica, Arial, sans-serif;
+  --ifm-color-primary-lightest: #000000;
+  --ifm-color-primary-lighter: #000000;
+  --ifm-color-primary-light: #000000;
+  --ifm-color-primary: #000000;
+  --ifm-color-primary-dark: #000000;
+  --ifm-color-primary-darker: #000000;
+  --ifm-color-primary-darkest: #000000;
+  --ifm-h1-font-size: 55px !important;
+  --ifm-font-size-base: 18px;
+}
+
+html[data-theme="dark"] {
+  --ifm-background-color: #000000;
+  --ifm-background-surface-color: #090909;
+  --ifm-color-primary: #2ac7dc;
+  --ifm-color-primary-dark: #21b7cb;
+  --ifm-color-primary-darker: #1facbf;
+  --ifm-color-primary-darkest: #1a8e9e;
+  --ifm-color-primary-light: #41cde0;
+  --ifm-color-primary-lighter: #4cd0e2;
+  --ifm-color-primary-lightest: #6ed9e7;
+  --ifm-footer-background-color: #000000;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.05);
+  --ifm-pre-background: #0a0d0f !important;
+  --ifm-font-color-base: rgb(92, 113, 123);
+  --ifm-heading-color: rgb(42, 199, 220);
+  --ifm-navbar-link-color: #ffffff;
+}
+
+.markdown {
+  --ifm-link-decoration: underline;
+  --ifm-link-color: rgb(92, 113, 123);
+}
+
+.footer {
+  margin-top: 50px;
+}
+
+.footer__bottom {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.navbar__brand {
+  margin-right: 2rem;
+}
+
+.theme-doc-sidebar-menu {
+  padding-bottom: 100px;
+}
+
+.prism-code {
+  background-color: rgb(0, 0, 0) !important;
+}
+
+.theme-doc-markdown img {
+  border-radius: 6px;
+}
